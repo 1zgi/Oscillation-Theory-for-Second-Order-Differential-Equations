@@ -1,0 +1,646 @@
+documentclass[12pt]{artcle}
+ usepackage{amsmath,amssymb,latexsym, graphcx}
+ usepackage{amsthm}
+ newcommand{ds}{dsplaystyle}
+ newtheorem{teo}{Theorem}
+ newtheorem{dfn}{Defnton}
+ newtheorem{ex}{Example}
+ begn{document}
+ begn{ttlepage} 
+newcommand{HRule}{rule{lnewdth}{0.5mm}} 
+center 
+ncludegraphcs[wdth=4cm]{IMG_0058}
+  [0.5cm] 
+textsc{LARGE bf c{C}ankaya Unversty}[1.5cm] 
+textsc{Large Department of Mathematcs}[0.5cm] 
+textsc{large Graduaton Project}[0.5cm] 
+HRule[1cm]
+ {hugebfseres Oscllaton Theory for Second Order Dfferental Equatons}[0.4cm] 
+HRule[1.5cm]
+ begn{mnpage}{0.4textwdth}
+ begn{flushleft}
+ large
+ textt{Student(Author)}
+ İzg textsc{KANATLI} 
+end{flushleft}
+ end{mnpage}
+ ~
+ begn{mnpage}{0.4textwdth}
+begn{flushrght}
+ large
+ textt{Supervsor}
+ Assoc. Prof. Dr. {Ekn} textsc{UĞURLU} 
+end{flushrght}
+ end{mnpage}
+ end{ttlepage} 
+secton{Introducton}
+ ndentpar A Sturm-Louvlle dfferental equaton s sad to be oscllatory at $nfty$, f there 
+exsts a nontrval soluton of ths equaton whch havng nfntly many zeros n every nterval of 
+the form $[alpha,nfty)$. Otherwse, t sad to be nonoscllatory at $nfty$. As we shall see that 
+dsconjugacy and admssble functons are some mportant concepts related wth ths theory. If 
+no soluton of a dfferental equaton has more than one zero n nterval I then t s sad to be 
+dsconjugate on I. If a functon and ts frst dervatve are contnuous on some nterval, and the 
+functon attans the value zero at both ends of the nterval then t s sad to be admssble. 
+par Let us begn wth the smple wave equaton
+   begn{equaton}
+ y''(x) + k^2y(x) = 0.%equaton 1
+   end{equaton}
+ Ths equaton has the solutons,
+ begn{equaton} 
+C(sn k)(x-x_0) 
+ end{equaton}
+ or
+ begn{equaton}
+ C(cos k)(x-x_0),
+ end{equaton}
+ nondent and clearly these solutons are oscllatory n $mathbb{R}$, where $k$ s a postve 
+constant and $C$ s an arbtrary constant. It can be seen that the zeros of lnearly ndependent 
+solutons of the equaton (1) are nterlaced. Equaton (1) can be consdered as the specal case of 
+the followng equaton,
+ begn{equaton} 
+y''(x) +q(x)y(x)=0, %equaton 2
+ end{equaton}
+ where $q(x)$ s contnuous on some nterval. In general as we all see that, f $y_1(x)$ and 
+$y_2(x)$ are two lnearly ndependent solutons of (1) and $x_1$ and $x_2$ are consecutve 
+zeros of $y_1(x)$, then $y_2(x)$ has one and only one zero n $(x_1,x_2)$.
+ndent It s known that a soluton $y(x)$ of the equaton (2) s contnuous on the gven nterval 
+whenever $q(x)$ s at least contnuous on that nterval. Accordng to the theory of ordnary 
+dfferental equatons a soluton $y(x)$ of the equaton (2) satsfyng the ntal condtons $y(x_0) 
+= 0$ and $y'(x_0) = 0$ should be a trval soluton. Therefore, nothng can be sad about the 
+zeros of such trval solutons. So, the zeros of nontrval solutons are needed to the examned.
+ ndent It s better to remnd that a pont $x = x_1$ s called a zero of the soluton $y(x)$ of (2) f 
+$y(x_1) = 0$, and accordng to prevous explanaton $y'(x_1)$ should be dfferent from zero snce 
+otherwse t becomes a trval soluton. From the theory of calculus, t s known that f 
+$y'(x_1)=alpha  0$ then there exsts an nterval $(x_1-h_1,x_1+h_2)$ n the doman of $y(x)$ 
+such that, $y(x)$ s negatve (postve) on $(x_1-h_1,x_1)$ and postve (negatve) on $
+ (x_1,x_1+h_2)$, where $h_1$ and $h_2$ are some postve constants. The ponts $x_1$ and 
+$x_2$ are called consecutve zeros of the soluton $y(x)$ of (2) f $y(x_1) = y(x_2) = 0$ and 
+there s no other zero between $x_1$ and $x_2$, where $x_1x_2$.
+ ndent We shall note that some Sturm-Louvlle equatons may have the solutons so that these 
+solutons may not have any zeros on the gven nterval. Indeed, the followng second order 
+Sturm-Louvlle equaton
+ begn{equaton}
+ y''(x)-k^2y(x)=0
+ end{equaton} 
+has the solutons
+ begn{equaton}
+ Ce^{kx}
+ end{equaton}
+ and
+ begn{equaton}
+ Ce^{-kx},
+ end{equaton}
+ where $C$ and $k$ are some arbtrary real numbers, and as can be seen that these solutons do 
+not have any zero on $mathbb{R}$, unless $C=0$.
+ secton{Sturm's Seperaton Theorem}%Secton 2
+ ndentpar The frst fundamental theorem on comparson of the zeros of the Sturm-Louvlle 
+equaton has been gven by Sturm. Frst of all we shall share the followng seperaton theorem.
+ [baselneskp]
+ {bf Theorem 2.1}textt { Let $y_1(x)$ and $y_2(x)$ be two lnearly ndependent solutons of the 
+equaton (2). If $x_1$ and $x_2$ are consecutve zeros of $y_1(x)$ then $y_2(x)$ has one and 
+only one zero n $(x_1,x_2)$.}[baselneskp]
+ {bf Proof} Assume that $y_1(x)0$ for $x_1xx_2$ such that $y'_1(x_1)0$. Accordng to the 
+assumpton $x_1$ and $x_2$ are consecutve zeros of $y(x)$ so that $y_1'(x_2)0$. Therefore, 
+$y_1(x)$ s ncreasng at $x=x_1$ and $y_1(x)$ s decreasng at $x=x_2$. It s known that the 
+Wronskan of $y_1(x)$ and $y_2(x)$ s a non-zero constant. Here the Wronskan $W[y_1,y_2]$ of 
+the solutons $y_1$ and $y_2$ s defned by
+ begn{equaton}nonumber
+ W[y_1,y_2] = begn{vmatrx} y_1 & y_2  y'_1 & y'_2 end{vmatrx}=  y_1y'_2-y_2y'_1.
+ end{equaton}
+ So, at  $x=x_1$ we havebegn{equaton}nonumber y_1(x_1)y'_2(x_1)-y'_1(x_1)y_2(x_1) = -y'_1(x_1)y_2(x_1).
+ end{equaton}
+ Smlarly for $x=x_2$, begn{equaton}nonumber y_1(x_2)y'_2(x_2)-y'_1(x_2)y_2(x_2) = -y'_1(x_2)y_2(x_2)
+ end{equaton}
+ s obtaned. So
+ begn{equaton}nonumber 
+y_2(x_1)y'_1(x_1)=y_2(x_2)y'_1(x_2),
+ end{equaton}
+ and hence, begn{equaton}nonumber (sgn)y_2(x_1)=-(sgn)y_2(x_2).
+ end{equaton} Ths mples that $y_2(x)$ has at least one zero n $(x_1,x_2)$.
+ ndent If there were two zeros $x_1$ and $x_2$ of $y_2(x)$ between $(x_1,x_2)$, $y_1(x)$ 
+would have at least one zero n $(x_1,x_2)$. Ths contradcts the assumpson of $x_1,x_2$ 
+beng consecutve zeros of $y_1(x)$. Ths completes the proof. $blacksquare$
+ %newpage
+ secton{Comparson Theorems}%Secton 3
+ ndentpar We shall ntroduce some results on the zeros of solutons of some Sturm-Louvlle 
+equatons.
+ subsecton{Sturm's Comparson Theorem} %subsecton 1
+ ndentpar Followng theorem s due to Sturm [2].[baselneskp]
+ {bf Theorem 3.1.1} textt{Consder two equatons,} %Theorem 3.1.1
+ begn{equaton}
+ u''(x)+F(x)u(x)=0,
+ end{equaton}
+ begn{equaton}
+ v''(x)+G(x)v(x)=0,
+ end{equaton}
+ textt{where $F(x),G(x)$ are postve, contnuous and $G(x) ge F(x)$ n $(a,b)$. Let the soluton 
+$u(x)$ of the equaton (3) have two consecutve zeros, $x_1$ and $x_2$, $ax_1x_2b$, and 
+$v(x)$ be soluton of the equaton (4) wth a zero at $x_1$. Then $v(x)$ has at least a zero $x_3$ 
+n $(x_1,x_2)$.}[baselneskp] %Proof startng
+ {bf Proof} Frstly, let us multply the equaton (3) by $v(x)$ and multply the equaton (4) by 
+$u(x)$. Then we shall subtract the frst equaton from the second equaton so that
+ begn{equaton}
+v''(x)u(x)-u''(x)v(x)+G(x)v(x)u(x)-F(x)v(x)u(x)=0.
+ end {equaton}
+ Equaton (5) can also be wrtten as
+ begn{equaton}
+ tfrac{d}{dx}W[u,v]+(G(x)-F(x))u(x)v(x)=0.
+ end {equaton}
+ Now, ntegratng the equaton (6) on $(x_1,x_2)$ one has
+ begn{equaton}nonumber
+ W[u,v](x)bgg ^{x_2}_{x_1}+nt^{x_2}_{x_1}(G(x)-F(x))u(x)v(x) dx=0,
+ end {equaton}
+ or
+ begn{algn}%equaton 7
+ nonumber
+ u(x_2)v'(x_2)-v(x_2)u'(x_2)-u(x_1)v'(x_1)+v(x_1)u'(x_1) + nt^{x_2}_{x_1}(G(x)-F(x))u(x)v(x) 
+dx=0.
+ end {algn}
+ Hence
+ begn{equaton}nonumber-v(x_2)u'(x_2)+ nt^{x_2}_{x_1}(G(x)-F(x))u(x)v(x) dx=0.
+ end {equaton}
+ If $v'(x_1)0$ and $v(x)$ were postve n nterval $(x_1,x_2)$ then the ntegral would be postve 
+and t can be nferred that
+ begn{equaton}-v(x_2)u'(x_2) ge 0.
+ end{equaton}
+ ndent Ths expresson shows that $v(x)$ cannot keep a constant sgn throughout the nterval $
+ (x_1,x_2)$. $blacksquare$[baselneskp]%qedsymbol{}
+ %
+ {bf Theorem 3.1.2}textt{ Let $u(x)$ and $v(x)$ be the solutons of (3) and (4), respectvely, 
+such that} %Theorem 3.1.2
+ begn{gather}
+ u(x_1)=v(x_1)=0 quad ,quad u'(x_1)=v'(x_1)0.
+ end{gather}
+ textt{Suppose that $u(x)$ s ncreasng n $[x_1,x_2]$ and reaches a maxmum at $x=x_2$. 
+Then $v(x)$ reaches a maxmum at some pont $x_3$ wth $x_1x_3x_2$.}[baselneskp]
+ {bf Proof} Assume that $u(x)$ reaches a maxmum pont at $x=x_2$. Ths means that 
+$u'(x_2)=0$.
+ Then (7) can be wrtten as 
+begn{equaton}
+ u(x_2)v'(x_2)+ nt^{x_2}_{x_1}(G(x)-F(x))u(x)v(x) dx=0.
+ end {equaton}
+Ths equaton shows that $v'(x_2)0$ f $v(x)0$ on $(x_1,x_2)$. So there should be a maxmum 
+of $v(x)$ at $x_3$ on $x_1xx_2$. Ths completes the proof.hspace{8.6cm}$blacksquare$ 
+[baselneskp]
+ {bf Remark} It s possble to consder much more general verson of the Sturm-Louvlle 
+equatons rather than the form gven n (2) as follows. However n many applcatons the sgn of 
+the leadng functon of the Sturm-Louvlle equaton s -1. So we shall consder the followng 
+equatons
+ begn{equaton}%equaton 8-(p_1(x)u'(x))'+p_0(x)u(x)=0,
+ end {equaton}
+ begn{equaton}%equaton 9-(q_1(x)v'(x))'+q_0(x)v(x)=0,
+ end {equaton}
+ where $p_10$, $q_10$ and $p_0$, $q_0$ are some real-valued functons on an nterval $
+ (x_1,x_2)$.
+ subsecton {Sturm-Pcone Comparson Theorem}%SubSecton 2
+ ndentpar The restrcton $p_1(x)=q_1(x)$ has been removed by M.Pcone n 1909.
+ [baselneskp]
+ {bf Theorem 3.2.1} textt{Suppose that $p_1(x) ge q_1(x)$ and $p_0(x) ge q_0(x)$ on an 
+nterval $[x_1,x_2]$. If $x_1$ and $x_2$ are consecutve zeros of $u(x)$ of (8) then there should 
+exsts at least one zero of every soluton $v(x)$ of (9).}[baselneskp]
+ {bf Proof} Consder that $v(x)ne0$ for $xn[x_1,x_2]$. Followng the equaton s known as 
+Pcone's dentty;
+ begn{algn}%Equaton 10
+ tfrac{d}{dx}bgg[frac{u}{v}(vp_1u'-uq_1v')bgg]= &tfrac{d}{dx}bgg[up_1u'-frac{u^2q_1v'}{v}
+ bgg]nonumber
+ =& (u')^2p_1+(p_1u')'u-Bgg[frac{2uu'v-v'u^2}{v^2}(v'q_1)+ frac{u^2}{v}(q_1v')'Bgg]
+ nonumber
+ =& (u')^2p_1+p_0u^2+frac{q_1}{v^2}[uv'-vu']^2- q_1(u')^2-u^2q_0nonumber
+ =& (u')^2(p_1-q_1)+u^2(p_0-q_0)+frac{q_1}{v^2}[uv'-vu']^2.
+ end{algn}
+ Integratng both sdes of (10) on $[x_1,x_2]$ we have,
+ begn{algn}
+ &frac{u}{v}bgg[vp_1u'-uq_1v'bgg]bgg^{x_2}_{x_1}=0
+ &= nt^{x_2}_{x_1}bgg((p_1-q_1)(u')^2+(p_0-q_0)u^2+frac{q_1}{v^2}[uv'-vu']^2 bgg)dx  
+&ge nt^{x_2}_{x_1}bgg((p_1-q_1)(u')^2+(p_0-q_0)u^2bgg)dx
+ end{algn}
+ whch s a contradcton unless $p_1 equv q_1$, $p_0 equv q_0$ and $frac{uv'-vu'}{v^2}
+ =(frac{-u}{v})'=0$. However ths mples that $frac{u}{v}=$ constant. Consequently, $v(x_1) = 
+v(x_2)=0$. Ths s a contradcton. $blacksquare$
+ subsecton{Leghton's Comparson Theorem}
+{bf Theorem 3.3.1} textt{If $nt^{nfty}_{alpha}frac{1}{p_1}dx = nfty$ and $nt^{nfty}
+ _{alpha}{p_0}dx = -nfty$ then the Sturm-Louvlle equaton (8) s oscllatory at $nfty$, where 
+$alpha$ s a fxed constant.}[baselneskp]
+ {bf Proof} Suppose that $h = -frac{p_1u'}{u}$. Then t s obtaned that
+ begn{algn}
+ h'=-bgg(frac{(p_1u')'u-u'(p_1u')}{u^2}bgg) = &frac{-p_0u^2+u'^2p_1}{u^2}
+ =& -p_0+h^2frac{1}{p_1}=h'.
+ end{algn}
+ If $u0$ on $[beta,nfty)$, $alphalebetalenfty$, the equaton (8) s nonoscllatory at $
+ nfty$. Integratng $h'$ on $[beta,nfty)$ t s obtaned that
+ begn{algn}
+ h(x)-h(beta) =& -nt^{x}_{beta} p_0(t) dt + nt^{x}_{beta}frac{h^2(t)}{p_1(t)}dt,
+ end{algn}
+ and
+ begn{algn}
+ h(x) = & h(beta)-nt^{x}_{beta}p_0(t)dt + nt^{x}_{beta}frac{h^2(t)}{p_1(t)}dt.
+ end{algn}
+ Adoptng the notaton begn {equaton×} g(x)=nt^{x}_{beta}frac{h^2(t)}{p_1(t)}dt, end 
+{equaton} one gets that $h(x)g(x)$ on $(beta,nfty)$. Takng the dervatve of $g(x)$ t s 
+obtaned that
+ begn{equaton}
+ g'(x)geqfrac{h^2(x)}{p_1(x)}.
+ end{equaton}
+ It can be wrtten as
+ begn{equaton}
+ frac{h^2(x)}{p_1(x)}frac{g^2(x)}{p_1(x)},
+ end{equaton}
+ or
+ begn{equaton}
+ frac{g'(x)}{g^2(x)}frac{1}{p_1(x)}.
+ end{equaton}
+ Integratng both sdes of (11) on $[gamma,nfty)$, one obtaned that
+ begn{algn}
+ nt^{nfty}_{gamma}frac{g'(x)}{g^2(x)}dx & nt^{nfty}_{gamma}frac{1}{p_1(x)}dx
+ end{algn}
+ whch gves
+ begn{algn}
+ nt^{nfty}_{gamma} u^{-2}du = -u^{-1}bgg^{nfty}_{gamma} = -frac{1}{g}bgg^{nfty}
+ _{gamma} nt^{nfty}_{gamma}frac{1}{p_1}dx,
+ end{algn}
+ and
+begn{algn}
+ nt^{nfty}_{gamma}frac{1}{p_1}dx  frac{1}{g(gamma)}nfty.
+ end{algn}
+ Ths s a contradcton. $blacksquare$[baselneskp]
+ The proof of the followng theorem can be obtaned from the proof of Theorem 3.3.1.
+ [baselneskp]
+ {bf Theorem 3.3.2} textt{If $nt^{nfty}_{alpha}frac{1}{p_1(x)}dx  nfty$ and $nt^{nfty}
+ _{alpha} p_0(x)dxnfty$ then (8) s nonoscllatory at $nfty$.}
+ subsecton{Levn's Comparson Theorem}%Subsecton 4
+ ndent Levn consders the followng equatons
+ begn{algn}%Eq.s (12) and (13)
+ u''+p_0(x)u=0,
+ v''+q_0(x)v=0,
+ end{algn}
+ respectvely, where $xn[alpha,beta]$, $p_0,q_0$ are some contnuous functons on $[alpha,
+ beta]$, $alpha,betanmathbb{R}$.
+ ndent The method used by Levn converts the dfferental equatons (12) and (13) nto the 
+Rccat equatons
+ begn{algn}%Equatons (14) and (15)
+ w'(x) = &w^2(x) + p_0(x),
+ h'(x) = &h^2(x) + q_0(x),
+ end{algn}
+ where $xn[alpha,beta]$. Indeed, substtutng $w(x)=-frac{u'(x)}{u(x)}$ and $h(x)=-frac{v'(x)}
+ {v(x)}$ nto the equatons (14) and (15), respectvely, then the equatons (12) and (13) are 
+obtaned.[baselneskp]
+ {bf Theorem 3.4.1} textt{Let $u(x)$ and $v(x)$ be nontrval solutons of (12) and (13), 
+respectvely, such that $u(x)$ does not vansh on $[alpha,beta]$, $v(alpha)neq 0$ and the 
+nequalty }
+ begn{equaton}%Equaton (16)-frac{u'(alpha)}{u(alpha)}+nt^{x}_{alpha} p_0(t)dtbgg-frac{v'(alpha)}{v(alpha)}+nt^{x}
+ _{alpha}q_0(t)dtbgg
+ end{equaton} 
+textt{holds for all $xn[alpha,beta]$. Then $v(x)$ does not vansh on $[alpha,beta]$ and the 
+nequalty}
+ begn{equaton}%Equaton (17)-frac{u'(x)}{u(x)}bgg-frac{v'(x)}{v(x)}bgg
+ end{equaton}
+ textt{holds, where $xn[alpha,beta]$. }[baselneskp]
+ {bf Proof} If $u(x)$ does not vansh then $w(x)=-frac{u'(x)}{u(x)}$ s contnuous on $[alpha,
+beta]$. Integratng the equaton (14) on $[alpha,x]$ one gets that
+ begn{algn}nonumber
+ w(x)-w(alpha)=nt^{x}_{alpha}w^2(t)dt+nt^{x}_{alpha}p_0(t)dt
+ end{algn}
+ or
+ begn {equaton}
+ w(x)=w(alpha)+nt^{x}_{alpha}w^2(t)dt+nt^{x}_{alpha}p_0(t)dt. %Eq.(18)
+ end{equaton}
+ By the hypotess (16), t can be wrtten as 
+begn {equaton}
+ w(x)ge-frac{u'(alpha)}{u(alpha)} + nt^{x}_{alpha}p_0(t)dt 0.
+ end{equaton}
+ Snce $v(alpha)neq0$ then $h(x)=-frac{v'(x)}{v(x)}$ s contnuous on $[alpha,gamma]$, 
+where $alphagammaleqbeta$. Integratng the equaton (15) on $[alpha,gamma]$ where 
+$x=gamma$ we get
+ begn{algn}
+ h(x)-h(alpha)=nt^{x}_{alpha}h^2(t)dt + nt^{x}_{alpha}q_0(t)dt,
+ end{algn} 
+or
+ begn{algn}
+ h(x)= h(alpha)+nt^{x}_{alpha}h^2(t)dt + nt^{x}_{alpha}q_0(t)dt.%Eq.(17)
+ end{algn} 
+From (19) and we have 
+begn{algn}
+ h(x)&ge-frac{v'(alpha)}{v(alpha)} + nt^{x}_{alpha}q_0(t)dt  &-w(alpha)-nt^{x}_{alpha}
+ p_0(t)dtge -w(x),
+ end{algn}
+ where $xn[alpha,gamma]$. Consequently, $w(x)-h(x)$. In order to show that 
+begn{equaton}
+ h(x)w(x)%Eq(18)
+ end{equaton}
+ on $alphaleq$$x$$leqgamma$, t s suffcent to show that $w(x)h(x)$ on $alphaleq $$x$$ 
+leqgamma$.
+ ndent If we suppose to the contrary, there exsts an $x_0$ on the nterval $[alpha,gamma]$ 
+such that the nequalty $w(x_0)leq h(x_0)$ holds. Then snce $w(alpha)h(alpha)$ from (17) 
+(wth $x=alpha)$ and $w(x)$, $h(x)$ are contnuous on the nterval $[alpha,gamma]$, there 
+exsts some pont $x_1$ n $(alpha,x_0]$ such that $w(x_1)=h(x_1)$ and $h(x)w(x)$ for $
+ alphaleq$$x$$x_1$. Snce $w(x)-h(x)$ was establshed prevously, t follows that $h(x)
+ w(x)$ for $alphaleq$$x$$x_1$. Consequently,  
+begn{equaton}
+ nt^{x_1}_{alpha}h^2(t)dtnt^{x_1}_{alpha}w^2(t)dt.
+end{equaton}
+ Hence, t s obtaned that
+ begn{algn}
+ h(x_1) &= h(alpha) + nt^{x_1}_{alpha}h^2(t)dt + nt^{x_1}_{alpha}q_0(t)dt & w(alpha) + 
+nt^{x_1}_{alpha}w^2(t)dt + nt^{x_1}_{alpha} p_0(t)dt = w(x_1)
+ end{algn}
+ from equatons (18) and (19). However, ths s a contradcton.hspace{2cm}$blacksquare$
+ [baselneskp]
+ {bf Theorem 3.4.2}textt { Let $u(x)$ and $v(x)$ be two solutons of (12) and (13), respectvely, 
+such that $u(x)$ does not vansh on $[alpha,beta]$, $v(beta)neq0$ and the nequalty}
+ begn{equaton}%Equaton (19)
+ frac{u'(beta)}{u(beta)}+nt^{beta}_{x} p_0(t)dtbggfrac{v'(beta)}{v(beta)}+nt^{beta}
+ _{x}q_0(t)dtbgg
+ end{equaton} %Eq.(20)
+ textt {holds for all $xn[alpha,beta]$. Then $v(x)$ does not vansh on $[alpha,beta]$, and 
+the nequalty}
+ begn{equaton}%Eq.19
+ frac{u'(x)}{u(x)}bggfrac{v'(x)}{v(x)}bgg, hspace{1cm} alphaleq xleqbeta.
+ end{equaton}
+ textt{holds}.[baselneskp]
+ {bf Proof} If $u(x)$ does not vansh, $w(x)= -frac{u'(x)}{u(x)}$ s contnuous on $[alpha,beta]
+ $ and ntegratng the equaton (14) and (15) on the nterval $[x,beta]$. We obtan that
+ begn{equaton}
+ w(beta) - w(x)= nt^{beta}_{x}w^2(t)dt + nt^{beta}_{x}p_0(t)dt
+ end{equaton}
+ and
+ begn{equaton}
+ h(beta) - h(x)= nt^{beta}_{x}h^2(t)dt + nt^{beta}_{x}q_0(t)dt.
+ end{equaton}
+ So t s found that
+ begn{algn}-w(x) &geq -w(beta) + nt^{beta}_{x}p_0(t)dt &-h(x) geq -h(beta) + nt^{beta}_{x}
+ q_0(t)dt.
+ end{algn}
+ Consequently, $-w(x)h(x)$ on $xleq x leqbeta$. Let us suppose the contrary. Then there 
+exsts an $x_0$ on $[x,beta]$ such that $-w(x_0)leq -h(x_0)$. Then snce $-w(beta)
+ h(beta)$ from hypotess (22) (wth $x=beta$) and snce $w(x)$ and $h(x)$ are contnuous on $
+ [x,beta]$, there exsts $x_1$ n $[x_0,beta)$ such that 
+begn{equaton}-w(x_1)=-h(x_1)
+ end{equaton} 
+and
+ begn{equaton}-w(x)-h(x)
+ end{equaton} 
+for $x_1xleqbeta$. Snce $-w(x)-h(x)$ we also have
+ begn{algn}-h(x_1) &= -h(beta) + nt^{beta}_{x_1}h^2(t)dt + nt^{beta}_{x_1}q_0(t)dt & -w(beta) + 
+nt^{beta}_{x_1}w^2(t)dt + nt^{beta}_{x_1} p_0(t)dt = -w(x_1).
+ end{algn}
+ However ths s a contradcton. hspace{7.5cm}$blacksquare$[baselneskp]
+ {bf Theorem 3.4.3}textt{ Suppose that there exsts a nontrval soluton $v(x)$ of the equaton 
+(13) satsfyng the condtons $v(alpha)=v(beta)=v'(gamma)=0$, where $
+ alphagammabeta$. If the nequaltes}
+ begn{equaton}
+ nt^{gamma}_{x} p_0(t)dt geq bggnt^{gamma}_{x} q_0(t)dtbgg, hspace{0.5cm} nt^{x}
+ _{gamma} p_0(t)dt geq bggnt^{x}_{gamma} q_0(t)dtbgg
+ end{equaton}
+ textt {hold for all $x$ on $[alpha,gamma]$ and $[gamma,beta]$, then every soluton $u$ of 
+the equaton (12) has at least one zero on $[alpha,beta]$. }[baselneskp]
+ {bf Proof} Let $u$ be a nontrval soluton of (12) satsfyng $u'(gamma)=0$. Levn asserted 
+that $u$ has at least one zero n each nterval $[alpha,gamma)$ and $(gamma,beta]$. Frst, 
+observe that $u(gamma)neq0$. Otherwse, $u$ would be a trval soluton of (12). If $u$ had no 
+zero n $(gamma,beta]$ then $u$ would have no zero on $[gamma,beta]$. Theorem 3.4.1 
+supports the hypothess (21). Thus $v$ would have no zero on $[gamma,beta]$. Ths 
+contradcts the hypothess $v(beta)=0$. Lkewse, f $u$ had no zero on $[alpha,gamma)$, 
+Theorem 3.4.1 gves the contradcton that $v$ has no zero on $[alpha,gamma]$. Indeed, Levn 
+has shown that $u$ has at least two zeros on $[alpha,beta]$, and hence every soluton of (12) 
+has at least one zero on $[alpha,beta]$ by Sturm Seperaton Theorem.hspace{11.6cm}$
+ blacksquare$
+ secton{Some Crtera}
+ ndentpar In ths secton we wll ntroduce some crtera on dsconjugacy, exstence of zeros of 
+solutons and oscllaton.
+ subsecton{Kreth's Crtera}
+ ndent Kreth ntroduced the followng theorem on dsconjugacy.[baselneskp]
+ {bf Theorem 4.1.1}textt{ If the dfferental equaton (9) s dsconjugate on $[alpha,beta]$, 
+then}
+ begn{equaton}%Eq.(24)
+ nt^{beta}_{alpha} (q_1 eta'^2 + q_0 eta^2)dx 0,
+ end{equaton}
+ textt{for all admssable $eta(x)notequv 0$.}[baselneskp]
+{bf Proof} If the equaton (9) s dsconjugate on $[alpha,beta]$, then there exsts a soluton 
+$v(x)$ of (9) whch s dfferent from zero on $[alpha,beta]$. Usng The Pcone dentty wth 
+$p_1equv q_1$ the followng can be wrtten 
+begn{equaton}%Eq. (25)
+ frac{d}{dx}bgg[frac{eta}{v}bgg(eta' q_1v-eta q_1 v'bgg)bgg] = frac{d}{dx}bgg(eta' eta 
+q_1-frac{eta^2 q_1 v'}{v}bgg).
+ end{equaton} 
+Therefore, proceedng the steps n equaton (25) t s obtaned that 
+begn{algn}
+ &(eta' q_1)'eta + eta'^2 q_1-bgg[(q_1v')'frac{eta^2}{v} + (q_1v')bgg(frac{2etaeta'v
+eta^2v'}{v^2}bgg)bgg]
+ =&(eta' q_1)'eta + eta'^2 q_1 - q_0eta^2 - frac{2q_1v'etaeta'}{v} + frac{q_1eta^2 v'^2}
+ {v^2}
+ =& (eta' q_1)'eta - q_0eta^2 +q_1bgg(eta'-frac{eta v'}{v}bgg)^2=(eta' q_1)'eta + 
+q_1eta'^2-frac{d}{dx}bgg(frac{q_1eta^2 v'}{v}bgg).
+ end{algn}
+ Cancellng $(eta' q_1)'eta$ and multplyng both sdes of the equaton by -1 we get
+ begn{equaton}%Eq.(26)
+ q_1eta'^2 + q_0eta^2 = q_1bgg(eta'-frac{eta v'}{v}bgg)^2 + frac{d}{dx}
+ bgg(frac{q_1eta^2 v'}{v}bgg).
+ end {equaton}
+ Integratng both sdes of the equaton (26) on $[alpha,beta]$ t s found that
+ begn{algn}
+ nt^{beta}_{alpha}(q_1eta'^2+q_0eta^2)dx = nt^{beta}_{alpha} q_1bgg(eta'-frac{eta v'}
+ {v}bgg)^2+ bgg(frac{q_1eta^2 v'}{v}bgg)bgg^{beta}_{alpha}.
+ end{algn}
+ Snce $eta(alpha)=eta(beta)=0$,
+ begn{equaton}
+ bgg(frac{q_1eta^2 v'}{v}bgg)bgg^{beta}_{alpha} = 0.
+ end{equaton}
+ So, we get 
+begn{algn}
+ nt^{beta}_{alpha}(q_1eta'^2+q_0eta^2)dx = nt^{beta}_{alpha} q_1bgg(eta'-frac{eta v'}
+ {v}bgg)^2 ge 0
+ end{algn}
+ wth equalty f and only f 
+begn{algn}
+ eta'-frac{eta v'}{v} &=frac{eta' v - v'eta}{v}
+ &=vbgg(frac{eta'}{v}-frac{v'eta}{v^2}bgg)
+ &=0
+ end{algn}
+holds for the soluton $v0$. Then $(frac{eta}{v})'=0$ such that $frac{eta}{v}= C$, $C$ s a 
+arbtrary constant. Ths gves that $eta=Cv$. Ths s a contradcton. Consequently, equaton 
+(24) s establshed for all admssble $eta(x)notequv0$ on the nterval $[alpha,beta]$. 
+hspace{4cm}  $blacksquare$ [baselneskp]
+ {bf Corollary 4.1.1}textt{ If there exsts an admssble $eta(x)notequv0$ such that }
+ begn{equaton}
+ nt^{beta}_{alpha} (q_1 eta'^2 + q_0 eta^2)dxleq0,
+ end {equaton}
+ textt{then every soluton of the equaton (9) has a zero n $[alpha,beta)$. }
+ subsecton{Leghton's Crteron}
+ ndent Leghton has noted that Sturm-Louvlle Comparson Theorem s a specal case of 
+Corollary 4.1.1. Indeed, f the followng nequalty holds
+ begn{equaton}%Eq.(27)
+ nt^{beta}_{alpha}[(p_1 - q_1)eta'^2 dx + (p_0-q_0)eta^2]dx leq nt^{beta}_{alpha} (q_1 
+eta'^2 + q_0 eta^2)dx 
+end{equaton}
+ the followng s obtaned.[baselneskp]
+ {bf Corollary 4.2.1}textt{ If there exsts an admssble $eta$ such that the nequalty (27) s 
+satsfed, then every solutons of (9) has a zero n $[alpha,beta)$. }
+ subsecton{Wntner's Crtera}
+ ndentpar A.Wntner ntroduced some crtera on the oscllatory property of the equaton
+ begn{equaton}%Eq.(28)
+ y''+q(x)y=0
+ end{equaton}
+ where $q(x)$ s real valued, contnuous functon for large postve $x$, where $x_0leq xnfty$ 
+and $x_0nmathbb{R}$.[baselneskp]
+ {bf Theorem 4.3.1}textt{ The equaton (28) s oscllatory at $nfty$ f}
+ begn{equaton}
+ Q(x) = nt^{x}q(s)ds
+ end{equaton}
+ textt{satsfes}
+ begn{equaton}%Eq.(29)
+ lm_{xtonfty}frac{nt^{x}Q(s)ds}{x}=nfty.
+ end{equaton}[baselneskp]
+ {bf Proof} Let us assume the contrary. So that the equaton (28) s nonoscllatory. If $y(x)$ s a 
+nontrval soluton of (28), then for large $x$ $y(x)$ s postve. Snce $y(x)$ does not vansh on 
+some nterval around nfnty, t has a logartmc dervatve so that $h=frac{y'}{y}$. It satsfes the 
+Rccat equaton
+ begn{equaton}%Eq.(30)
+h'=-q-h^2.
+ end{equaton}
+ Indeed one has
+ begn{algn}
+ h'&= frac{y''y-y'^2}{y^2}
+ &=frac{y''y}{y^2}-frac{y'^2}{y^2}
+ &=frac{-qy^2}{y^2}-frac{y'^2}{y^2} = -q-h^2.
+ end{algn}
+ The equaton (30) mples the nequalty $h'leq -q$ or $-h'geq q$. Integratng the nequalty 
+$qleq -h'$ twce on some ntervals whose upper bounds are $x$, t s obtaned that
+ begn{algn}
+ &nt^{x}q(s)ds leq -h(x)+c_1
+ end{algn}
+ and
+ begn{algn}
+ & nt^{x}Q(s)ds leq -nt^{x}h(s)ds+c_1x+stackrel{sm}{c_2}
+ end{algn}
+ where $c_1,stackrel{sm}{c_2}$ are some constants. Therefore,
+ begn{algn}
+ nt^{x}Q(s)ds leq -lny(x)+c_1x+c_2
+ end{algn}
+ or
+ begn{algn}%eq.(31)
+ nt^{x}Q(s)ds - c_1x-c_2 leq - ln y(x).
+ end{algn}
+ Multplyng both sdes of the nequalty (31) by $1over x$, we get
+ begn{algn}nonumber
+ frac{nt^{x}Q(s)ds}{x} - c_1-frac{c_2}{x} leq frac{-lny(x)}{x}.
+ end{algn}
+ If hypotess (29) holds, then 
+begn{equaton}
+ lm_{xtonfty} ln y(x)=-nfty.
+ end{equaton} 
+Hence, ths gves a contradcton.hspace{7.3cm}$blacksquare$[baselneskp]
+ {bf Theorem 4.3.2}textt{ The equaton (12) s nonoscllatory at $nfty$ f and only f there exsts 
+a functon $v$ so that $v$ and $v'$ are contnuous satsfyng the nequalty}
+ begn{equaton}
+ v'(x) + v^2(x)leq -c(x)
+ end{equaton}
+ textt{for suffcently large $x$.}[baselneskp]
+ {bf Proof} If equaton (12) s nonosclatory at $nfty$ and $u(x)$ s nontrval soluton of the 
+equaton (12), there exsts some number $x_0$ such that $u(x)$ has no zero on $[x_0,nfty)$ 
+and $v=frac{u'}{u}$ satsfes the Rccat equaton 
+begn{equaton}
+ v'(x) + v^2(x)= -c(x).
+ end{equaton}
+ Conversely, f there exsts a fucton $v$ satsfyng 
+begn{equaton}-C(x)equv v'(x) + v^2(x)leq -c(x), xgeq x_0.
+ end{equaton}
+ Then
+ begn{equaton}
+ u(x)=expbgg[nt^{x}_{x_0} v(t) dtbgg]
+ end{equaton}
+ satsfes $u''+C(x)u=0$. Indeed
+ begn{algn}
+ u'(x)= &v(x)expbgg[nt^{ x}_{x_0}v(t)dtbgg],
+ u''(x)= &v'(x)expbgg[nt^{ x}_{x_0}v(t)dtbgg]+v^2(x)expbgg[nt^{x}_{x_0}v(t)dtbgg] -&[v'(x)+v^2(x)]expbgg[nt^{x}_{x_0}v(t)dtbgg]=0.
+ end{algn}
+ Snce $c(x)leq C(x)$ on $x_0leq x nfty$, t follows from Sturm's Theorem 2.1 that no soluton 
+of $u''+c(x)u=0$ can have more than one zero on $[x_0,nfty)$. hspace{9.5cm}$blacksquare$
+ subsecton{Hartman's Crteron}
+ ndent
+ {bf Theorem 4.4.1} textt{ Every nonoscllatory equaton (12) has a soluton $u$ such that}
+ begn{equaton}
+ nt^{nfty} u^{-2}(t)dtnfty
+ end{equaton}
+ textt{s fnte and a nontrval soluton $v$ such that}
+ begn{equaton}
+ nt^{nfty} v^{-2}(t)dt = nfty.
+ end{equaton}
+ {bf Proof} Let $w$ be a soluton of the equaton (12) such that $w(x)0$ for $xx_0$, and 
+Hartman defnes a second soluton by
+ begn{equaton}%Eq.(36)
+ u(x)= w(x)nt^{x}_{x_0}w^{-2}(t)dt, xx_0.
+ end{equaton}
+ Takng the dervatve of the equaton (36) twce, t s obtaned
+ begn{algn}nonumber
+ u'(x)&= w'(x)nt^{x}_{x_0}w^{-2}(t)dt + w^{-1}(x),
+ end{algn}
+and
+ begn{algn}
+ u''(x)&= w''(x)nt^{x}_{x_0}w^{-2}(t)dt.%Eq(37)
+ end{algn}
+ Addng $p_0(x)u(x)$ to both sdes of the equaton (37) we get
+ begn{algn}
+ 0 = w''(x)nt^{x}_{x_0}w^{-2}(t)dt + p_0(x)w(x)nt^{x}_{x_0} w^{-2}(t)dt.
+ end{algn}
+ or
+ begn{algn}
+ 0 = (w''(x)+ p_0(x)w(x))nt^{x}_{x_0}w^{-2}(t)dt,
+ end{algn}
+ where $w0$ on $[x_0,x]$. Then 
+begn{equaton}
+ w''(x)+ p_0(x)w(x)=0.
+ end{equaton}
+ The Wronskan of $u$ and $w$ s
+ begn{algn}
+ u(x)w'(x)-w(x)u'(x)&=w'(x)w(x) nt^{x}_{x_0}w^{-2}(t)dt &-w(x)bgg[w'(x)nt^{x}_{x_0}w^{-2}
+ (t)dt+w^{-1}(x)bgg]
+ &=-1.
+ end{algn}
+ Snce $u(x)0$ for $xx_0$, t follows that the rato $w(x)u(x)$ s dfferentable for $xx_0$ and 
+begn{equaton}
+ bgg(frac{w}{u}bgg)' = frac{w'u-u'w}{u^2} = frac{-1}{u^2}.
+ end{equaton}
+ Hence for $x_0x_1leq xnfty$, ntegratng $(frac{w}{u})'$ on $[x_1,x]$ one gets that
+ begn{equaton}
+ frac{w(x)}{u(x)}= frac{w(x_1)}{u(x_1)}-nt^{x}_{x_1} frac{dt}{u^{2}(t)}.
+ end{equaton}
+ If
+ begn{equaton}
+ lm_{xtonfty}nt^{x}_{x_1} frac{dt}{u^{2}(t)} = nfty
+ end{equaton}
+ then $w(x)u(x)$ would approach $-nfty$, contrary to fact that both $u(x)$ and $w(x)$ are 
+postve for $xgeq x_1$.
+ ndent To prove the second asserton of the Theorem 4.4.1, defne another soluton by
+ begn{equaton}
+ v(x)=u(x) nt^{nfty}_{x}frac{dt}{u^{2}(t)}, xx_0.
+ end{equaton}  
+Then $v(x)u(x) rghtarrow 0$ as $x rghtarrow nfty$ snce $u^{-2}$ s ntegrable on $
+(x_0,nfty)$. From the dentty 
+begn{algn}
+ bgg(frac{u}{v}bgg)'&= frac{u'v-v'u}{v^2} 
+&=frac{u'unt^{nfty}_{x}frac{dt}{u^2}-uu'nt^{nfty}_{x}frac{dt}{u^2}+u^2frac{1}{u^2}}
+ {v^2}
+ &=frac{1}{v^2}
+ end{algn}
+ t s obtaned that
+ begn{algn}
+ frac{u(x)}{v(x)}= frac{u(x_1)}{v(x_1)}+nt^{x}_{x_1}frac{dt}{v^2(t)}, x_0leq x_1leq x,
+ end{algn}
+ and hence 
+begn{equaton}
+ lm_{xtonfty}nt^{x}_{x_1} frac{dt}{v^{2}(t)} = nfty.
+ end{equaton}
+ Ths completes the proof.hspace{8cm} $blacksquare$[baselneskp]
+ secton{Concluson}
+ ndentpar In ths project our man am s to clarfy the very well known results on oscllaton and 
+nonoscllaton (dsconjugacy) of some second-order Sturm-Louvlle equatons defned on some 
+fnte and nfnte ntervals. As s known such equatons arse, for nstance, n the study of 
+harmonc standng wave, vbratons of elastc bars and vbratng membranes. Therefore ths 
+project may help the students n understandng some real-world problems n detal.
+ secton{Referances}
+ [1]C. A. Swanson, Comparson and Oscllaton Theory of Lnear Dfferental Equatons, Academc 
+Press, 1968.[0.5cm]
+ [2]E. Hlle, Lectures on Ordnary Dfferental Equatons, 1968.  [0.5cm]
+ [3]K. Kreth, Oscllaton Theory, Sprnger-Verlag, 1973. [0.5cm]
+ [4]M. A. Namark, Lnear Dfferental Operators Part II Lnear Dfferental Operators n Hlbert 
+Space, George G. Harrap & Company, LTD. , 1968. [0.5cm]
+ end{document}
